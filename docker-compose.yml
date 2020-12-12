@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  theia:
+    restart: always
+    image: theiaide/theia-python
+    container_name: theia-container
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8000:8000'
+      - '8080:8080'
+      - '3000:3000'
+      - '3001:3001'
+    volumes:
+      - ".:/home/workspace"
+    environment:
+      PASSWORD: ibhubs
